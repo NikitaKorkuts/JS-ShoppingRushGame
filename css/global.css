@@ -1,0 +1,12 @@
+body {
+    background:#F7BD59;
+    font-family: sans-serif;
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+
+.hide {
+    display: none;
+}

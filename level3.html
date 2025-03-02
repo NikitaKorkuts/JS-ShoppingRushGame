@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Rush</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/lvl1.css">
+    <link rel="stylesheet" href="css/lvl3.css">
+</head>
+<body>
+    <main>
+        <div class="overboard">
+            <div class="shoppingList">
+                <h3>Список покупок</h1>
+                <span id="shoppingQuest"></span>
+                <ul id="shoppingList"></ul>
+            </div>
+            <div class="pointsCounter">
+                <span id="points" class="points" >0</span>
+                <span id="pointsAdds" class="pointsAdds"></span>
+            </div>
+            <button id="startBtn" class="button next-level">Играть</button>
+            <a href="stats.html" id="nextlvlBtn" class="button next-level hide">Перейти к статистике</a>
+            <button id="reloadBtn" class="button reload">Перезагрузить</button>
+            <a href="index.html" class="button exit">Выйти в меню</a>
+        </div>
+
+        <div class="board" id="board">
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div id="levelInfo">Уровень: 0</div>
+            <div class="grid-container" id="gridContainer"></div>
+            <img id="feedbackIcon" src="" alt="" class="feedback-icon hide">
+            <div id="results" class="results"></div>
+        </div>
+    </main>
+    <script src="js/utils/arrayUtils/arrayUtils.js"></script>
+    <script src="js/data/groceries.js"></script>
+    <script src="js/data/localStorage.js"></script>
+    <script src="js/components/groceryCard.js"></script>
+    <script src="js/lvl3.js"></script>
+</body>
+</html>

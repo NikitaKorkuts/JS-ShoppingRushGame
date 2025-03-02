@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Rush</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <main>
+        <img class="gameLogo" src="media/imgs/logo.png" alt="Shopping Rush">
+        <input type="text" id="playerName" placeholder="Имя игрока">
+        <div class="error-message">Введите имя игрока (3 символа и больше)</div>
+        <div class="buttons">
+            <div class="testBtn">
+                <svg onclick="toggleClass('lvlChoise', 'show')" class="button" xmlns="http://www.w3.org/2000/svg" fill="#D97600" width="40" height="40" viewBox="0 0 24 24" id="play">
+                    <path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z"></path>
+                </svg>
+                <div id="lvlChoise" class="lvlChoise">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+            </div>
+            <div class="playBtn" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="40" height="40" viewBox="0 0 24 24" id="play">
+                    <path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z"></path>
+                </svg>
+            </div>
+            <a class="button" href="stats.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#D97600" width="45" height="40" viewBox="0 0 512 512" id="stats">
+                    <path d="M176 96h64v320h-64zM80 320h64v96H80zM272 256h64v160h-64zM368 192h64v224h-64z"></path>
+                </svg>
+            </a>
+        </div>
+    </main>
+
+    <script src="js/utils/domUtils/domUtils.js"></script>
+    <script src="js/data/localStorage.js" ></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

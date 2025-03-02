@@ -1,0 +1,142 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+table {
+    border: 3px solid #E34B08;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px 30px;
+    background: rgba(227, 75, 8, 0.05);
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(227, 75, 8, 0.2);
+    width: calc(100% - 60px);
+}
+
+table thead {
+    font-size: 18px;
+    background: #e34a089f;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+table th {
+    padding: 18px 25px;
+    text-align: left;
+    position: relative;
+}
+
+table td {
+    padding: 15px 25px;
+    position: relative;
+}
+
+table tbody tr {
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+table tbody tr:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #E34B08, transparent);
+    opacity: 0.3;
+}
+
+table tbody tr:nth-child(even) {
+    background: rgba(227, 75, 8, 0.03);
+}
+
+table tbody tr:hover {
+    background: rgba(227, 75, 8, 0.08);
+    transform: scale(1.005);
+    box-shadow: 0 2px 8px rgba(227, 75, 8, 0.1);
+}
+
+table th:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+table tbody td {
+    font-size: 18px;
+    color: #333;
+}
+
+table tbody td:nth-child(2),
+table tbody td:nth-child(3),
+table tbody td:nth-child(4) {
+    font-weight: bold;
+    color: #E34B08;
+}
+
+#leaderboardTable tbody td:last-child,
+#historyTable tbody td:last-child {
+    font-weight: bold;
+    color: #222;
+}
+
+.header-container {
+    margin-top: 50px;
+    margin-left: 25px;
+    position: relative;
+    width: 100%;
+    padding: 30px 0 15px;
+}
+
+.back-link {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    color: #E34B08;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding: 8px 15px;
+}
+
+.back-link:hover {
+    transform: translateX(-15px);
+}
+
+.game-title {
+    color: #E34B08;
+    font-size: 2.5em;
+    margin: 20px 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        #E34B08 30%, 
+        rgba(227, 75, 8, 0.5) 50%, 
+        #E34B08 70%, 
+        transparent
+    );
+    border-radius: 2px;
+}

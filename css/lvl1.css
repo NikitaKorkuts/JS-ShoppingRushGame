@@ -1,0 +1,151 @@
+#product-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+main {
+    display: flex;
+    align-items: flex-start;
+}
+
+.shoppingList {
+    background: white;
+    width: 200px;
+    height: auto;
+    border: 3px solid #aaaaaa;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.board {
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    border: 5px solid #F4AB10;
+    margin: 20px 0;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart {
+    position: absolute;
+    transition: left 0.1s ease;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+
+#shoppingList {
+    align-self: end;
+    font-weight: bold;
+}
+
+.overboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+.pointsCounter {
+    color: #E34B08;
+    font-size: 100px;
+    border: 3px solid #E34B08;
+    border-radius: 20px;
+    padding: 10px 0;
+    width: 200px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 15px;
+}
+
+.points {
+    line-height: 100px;
+}
+
+.pointsAdds {
+    font-size: 20px;
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.next-level {
+    text-decoration: none;
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.reload {
+    background-color: #E34B08; 
+    color: white;
+}
+
+.exit {
+    text-decoration: none;
+    background-color: #F44336; 
+    color: white;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-icon {
+    position: absolute;
+    width: 100px;
+    height: 100px; 
+    transition: all 0.5s ease-out; 
+    opacity: 0.95;
+    bottom: 0;
+}
+
+.feedback-icon.hide {
+    opacity: 0;
+}
+
+.results {
+    align-self: center;
+    position: absolute;
+    top: 25%;
+    font-size: 80px;
+    transition: opacity 0.5s ease-out; 
+    opacity: 0;
+    color: #E34B08;
+}
+
+.success {
+    opacity: 0.9;
+    color: #4CAF50;
+}
+
+.fail {
+    opacity: 0.9;
+    color: #F44336;
+}

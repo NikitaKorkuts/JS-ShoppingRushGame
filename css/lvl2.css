@@ -1,0 +1,59 @@
+.progress-container {
+    align-self: center;
+    position: absolute;
+    top: 15px;
+    width: 500px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: growShrink 2s infinite;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #E34B08;
+    width: 100%;
+    transition: width 1s linear;
+    transform-origin: left center; 
+}
+
+@keyframes growShrink {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#levelInfo {
+    margin: 15px;
+    font-size: 24px;
+    color: #E34B08;
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 100px);
+    grid-template-rows: repeat(5, 100px);
+    gap: 30px 0; 
+}
+
+.grid-item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    border-radius: 20px;
+}
+
+.feedbackImg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 80px;
+    height: 80px; 
+    transition: all 0.5s ease-out;
+}

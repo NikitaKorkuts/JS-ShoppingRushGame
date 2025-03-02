@@ -1,0 +1,130 @@
+body {
+    background-image: url('../media/imgs/manuBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameLogo{
+    color: orange;
+    font-size: 60px;
+}
+
+input#playerName {
+    width: 300px; 
+    padding: 15px; 
+    font-size: 18px; 
+    border: 2px solid #4caf50; 
+    border-radius: 10px; 
+    background-color: #f9f9f9; 
+    color: #333; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+input#playerName:focus {
+    border-color: #4caf50; 
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); 
+    outline: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 10px;
+    display: none;
+    margin-top: 4px;
+}
+
+input#playerName.invalid {
+    border-color: red;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 220px;
+    margin: 40px 0;
+}
+
+.buttons .playBtn{
+    width: 150px;
+    height: 150px;
+    margin: 0 20px;
+    align-self: flex-start;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #3cff0081;
+    border: 1px solid #48c5008e;
+}
+
+.buttons .playBtn svg{
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    padding: 10px;
+    background-color: #F4AB10; 
+    border-radius: 100%; 
+    border: 3px solid #D97600;
+    text-align: center;
+    transition: background-color 0.3s; 
+    color: white; 
+    text-decoration: none; 
+    font-size: 18px; 
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.button:hover {
+    background-color: #F6A74D; 
+}
+
+.testBtn {
+    position: relative;
+    z-index: 3;
+}
+
+.lvlChoise {
+    width: 100px;
+    height: 65px;
+    background: #D97600;
+    position: absolute;
+    top: 0;
+    left: 0px; /* Начальное положение вне экрана */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: 0.3s ease; /* Анимация */
+    opacity: 0;
+    z-index: -1;
+    padding-right: 15px;
+}
+
+.lvlChoise.show {
+    opacity: 1;
+    left:30px; /* Перемещение на экран */
+}
+
+.lvlChoise span {
+    font-size: 24px;
+    text-decoration: none;
+    color: #E34B08;
+    margin: 3px;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}

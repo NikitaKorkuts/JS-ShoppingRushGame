@@ -103,12 +103,12 @@ input#playerName.invalid {
     background: #D97600;
     position: absolute;
     top: 0;
-    left: 0px; /* Начальное положение вне экрана */
+    left: 0px; 
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    transition: 0.3s ease; /* Анимация */
+    transition: 0.3s ease;
     opacity: 0;
     z-index: -1;
     padding-right: 15px;
@@ -116,7 +116,7 @@ input#playerName.invalid {
 
 .lvlChoise.show {
     opacity: 1;
-    left:30px; /* Перемещение на экран */
+    left:30px; 
 }
 
 .lvlChoise span {

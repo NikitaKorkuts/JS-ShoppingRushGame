@@ -1,8 +1,5 @@
 const GameConfig = {
     DROP_INTERVAL: 45,
-    REWARD_COEFFICIENT: 1,
-    PENALTY_MULTIPLIER: 1,
-    INITIAL_SPEED: 1,
     MAX_SPEED_MULTIPLIER: 3,
     SPEED_INCREMENT: 0.1 
 };
@@ -18,7 +15,7 @@ class GameState {
         this.points = 0;
         this.isStarted = false;
         this.cartX = 0;
-        this.direction = 0;
+        this.direction = 0; // 1 or -1
         this.moveInterval = null;
         this.displayingProducts = [];
         this.shoppingList = [];
@@ -76,8 +73,6 @@ class UIManager {
         results.classList.add(isSuccess ? 'success' : 'fail');
         if (isSuccess) {
             this.elements.nextlvlBtn.classList.remove('hide');
-        } else {
-            this.elements.nextlvlBtn.classList.add('hide');
         }
     }
 
@@ -258,12 +253,11 @@ class GameManager {
         const products = document.querySelectorAll('.product-card');
         let allAtBottom = true;
         
-        // Применяем множитель скорости
         const speed = (this.state.subLevel + 1) * this.state.speedMultiplier;
 
         products.forEach(card => {
             const currentTop = parseInt(card.style.marginTop) || 0;
-            const newTop = currentTop + speed; // Используем вычисленную скорость
+            const newTop = currentTop + speed;
             card.style.marginTop = `${newTop}px`;
             
             if (newTop < this.ui.elements.board.clientHeight - 100) {

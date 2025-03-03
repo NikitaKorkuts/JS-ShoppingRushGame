@@ -121,8 +121,8 @@ class UIManager {
         if (!lastTime) lastTime = timestamp;
         if (isPaused) return;
 
-        const deltaTime = timestamp - lastTime;
-        startOpacity -= deltaTime / (GameConfig.FADE_ANIMATION_DURATION - this.gameManager.state.subLevel);
+        const deltaTime = timestamp - lastTime; // Вычисляем сколько времени прошло с последнего кадра
+        startOpacity -= deltaTime / (GameConfig.FADE_ANIMATION_DURATION - (this.gameManager.state.subLevel * 1000));
 
         if (startOpacity <= 0) {
             element.dispatchEvent(new CustomEvent('fadeComplete', {
@@ -144,7 +144,6 @@ class UIManager {
       this.gameManager.handleProductInteraction(productId, false);
     }, { signal: controller.signal });
 
-    // Обработчики событий с автоматическим удалением
     element.addEventListener('mouseenter', () => {
         isPaused = true;
         element.style.opacity = 1;
@@ -160,7 +159,7 @@ class UIManager {
 
     // Сохраняем контроллер для очистки
     element._animationController = controller;
-}
+  }
 
   showFeedback(productId, isCorrect) {
     let elem = this.elements.gridContainer.querySelector(`.grid-item > [data-id="${productId}"]`).parentNode;

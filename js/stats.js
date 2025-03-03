@@ -29,7 +29,7 @@ gameHistory.forEach(game => {
 
 const leaderboardTable = document.querySelector('#leaderboardTable tbody');
 Object.entries(leaderboard)
-    .sort(([,a], [,b]) => b - a)
+    .sort(([, a], [, b]) => b.points - a.points)
     .forEach(([name, payload], index) => {
         leaderboardTable.innerHTML += `
             <tr>

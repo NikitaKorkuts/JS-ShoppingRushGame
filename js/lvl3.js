@@ -4,7 +4,7 @@ const GameConfig = {
   PENALTY_MULTIPLIER: 1,
   MAX_DIFFICULTY: 8,
   BASE_SPEED: 2,
-  SPEED_INCREMENT: 2
+  SPEED_INCREMENT: 1
 };
 
 class GameState {
